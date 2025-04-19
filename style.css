@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.app {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #76ff03;
+}
+
+.fixed-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #1e1e1e;
+  padding: 0.5rem 0 1rem 0;
+  margin-bottom: 0.1rem;
+}
+
+.timer-display {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.25rem;
+  padding: 1rem;
+  border: 2px solid #76ff03;
+  border-radius: 10px;
+  background-color: #000;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.input {
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: 2px solid #76ff03;
+  margin-bottom: 1rem;
+  background-color: #333;
+  color: #fff;
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.button-group button {
+  background-color: #1b5e20;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button-group button:hover {
+  background-color: #2e7d32;
+}
+
+.section {
+  background-color: #212121;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
+}
+
+.record-list li {
+  margin-bottom: 0.5rem;
+}
+
+.mark-block {
+  background-color: #1b1b1b;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid #76ff03;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mark-block button {
+  width: fit-content;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #33691e;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.mark-block button:hover {
+  background-color: #558b2f;
+}
+
+@media (max-width: 600px) {
+  .button-group button {
+    flex: 1 0 45%;
+  }
+}

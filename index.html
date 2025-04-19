@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mark Timer App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#76ff03" />
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(reg => console.log('Service Worker registered', reg))
+          .catch(err => console.error('SW registration failed', err));
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="app">
+    <div class="fixed-header">
+      <h2 class="title">Main Timer</h2>
+      <div class="timer-display" id="display">00:00:00.000</div>
+      <input type="text" id="note" placeholder="Enter note (optional)" class="input" />
+      <div class="button-group">
+        <button onclick="start()">Start</button>
+        <button onclick="lap()">Lap</button>
+        <button onclick="mark()">Mark</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="resume()">Resume</button>
+        <button onclick="reset()">Main Reset</button>
+        <button onclick="fullReset()">Full Reset</button>
+      </div>
+    </div>
+
+    <section class="section">
+      <h3>Lap Records</h3>
+      <ol id="record-list" class="record-list"></ol>
+    </section>
+
+    <section class="section">
+      <h3>Mark Timers</h3>
+      <div id="mark-container"></div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
