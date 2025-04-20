@@ -1,7 +1,7 @@
 {
   "name": "TimeTagger",
   "short_name": "TimeTagger",
-  "start_url": "/",
+  "start_url": "/index.html?source=pwa",
   "display": "standalone",
   "background_color": "#121212",
   "theme_color": "#76ff03",
