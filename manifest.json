@@ -1,11 +1,10 @@
 {
-  "name": "Mark Timer App",
-  "short_name": "Timer",
-  "start_url": "./",
+  "name": "TimeTagger",
+  "short_name": "TimeTagger",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#121212",
   "theme_color": "#76ff03",
-  "orientation": "portrait",
   "icons": [
     {
       "src": "icon-192.png",
@@ -17,5 +16,8 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
 }
